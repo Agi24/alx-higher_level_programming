@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 def safe_print_interger(value):
     try:
-        print("{:d}" .format(value))
+        print("{:d}".format(value))
         return True
-    except (ValueError, TypeError):
+    except ValueError:
+        return False
+    except:
         return False
